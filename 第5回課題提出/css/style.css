@@ -1,0 +1,378 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+body {
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.main {
+    margin-top: 64px;
+}
+
+.main_content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.confirm_content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.title_text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 24px 0px;
+}
+
+/* スライド */
+.slide {
+    padding-top: 64px;
+    overflow: hidden;
+}
+.swiper {
+    width: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    width: auto;
+}
+.swiper-slide img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+.swiper-button-next {
+    padding-right: 16px;
+    background-image: url("../img/slide-btn-next.svg");
+    background-size: cover;
+}
+.swiper-button-prev {
+    padding-left: 16px;
+    background-image: url("../img/slide-btn-prev.svg");
+    background-size: cover;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    display: none;
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+    .swiper-pagination-bullet {
+    margin: 0px 12px;
+    width: 16px;
+    height: 16px;
+    background-color: #bea574;
+}
+/* キャッチコピー */
+#catch_phrase {
+    padding: 24px;
+}
+.text {
+    font-size: 60px;
+    color: red;
+}
+/* スケジュール */
+.schedule_flex {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 3px solid #bea574;
+}
+
+#schedule {
+    padding: 24px;
+}
+
+.schedule_box {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.date {
+    width: 300px;
+    background-color: lightgray;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.date.active {
+    color: white;
+    background-color: #bea574;
+}
+
+.date:hover {
+    opacity: 0.5;
+}
+
+.date p {
+    padding: 8px 0px;
+}
+
+.date_text {
+    display: none;
+}
+
+.date_text.active {
+    display: block;
+    padding: 32px 24px;
+}
+
+/* アクセス */
+#access {
+    text-align: center;
+    padding: 24px 8px;
+}
+/* フォーム */
+#form {
+    padding: 24px;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.main_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.main_form input,
+select {
+    width: 400px;
+    margin-bottom: 8px;
+    padding: 4px 0px;
+}
+
+label span {
+    font-size: 8px;
+}
+
+.required {
+    color: red;
+}
+
+.tel_required_text {
+    display: none;
+    font-size: 8px;
+    color: red;
+}
+
+.tel_required_text.active {
+    display: block;
+}
+
+.email_required_text {
+    display: none;
+    font-size: 8px;
+    color: red;
+}
+
+.email_required_text.active {
+    display: block;
+}
+
+#confirm_button {
+    color: white;
+    background-color: #bea574;
+    opacity: 0.5;
+}
+#confirm_button.active {
+    opacity: 1;
+}
+/* 共通ヘッダー */
+header {
+    background-color: #bea574;
+    position: fixed;
+    padding: 12px 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.header_content {
+    padding: 0 8px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.header_content ul {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+header img {
+    width: 100px;
+}
+
+header img:hover {
+    opacity: 0.5;
+}
+
+header a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+}
+
+header a:hover {
+    opacity: 0.5;
+}
+
+header li {
+    list-style: none;
+}
+/* ハンバーガーメニュ */
+.hamburger-menu {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border: none;
+    background: transparent;
+    appearance: none;
+    padding: 0;
+    cursor: pointer;
+}
+.hamburger-menu__bar {
+    display: inline-block;
+    width: 44%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+.hamburger-menu__bar:first-child {
+    top: 16px;
+}
+.hamburger-menu__bar:nth-child(2) {
+    top: 24px;
+}
+.hamburger-menu__bar:last-child {
+    top: 32px;
+}
+.hamburger-menu--open .hamburger-menu__bar {
+    top: 50%;
+}
+.hamburger-menu--open .hamburger-menu__bar:first-child {
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.hamburger-menu--open .hamburger-menu__bar:last-child {
+    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.hamburger-menu--open .hamburger-menu__bar:nth-child(2) {
+    display: none;
+}
+.navigation {
+    display: flex;
+    background: #bea574;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 9999;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    flex-direction: column;
+}
+.navigation__list {
+    text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navigation__list-item {
+    border-bottom: solid 1px white;
+}
+.navigation__list-item:first-child {
+    border-top: solid 1px white;
+}
+.navigation__link {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    padding: 24px 0;
+    transition: 0.5s;
+}
+
+.navigation.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+/* 共通フッター */
+footer {
+    background-color: #bea574;
+    padding: 16px 0;
+    text-align: center;
+    width: 100%;
+}
+footer img {
+    width: 100px;
+}
+/* 確認画面 */
+tr,
+td {
+    padding: 48px;
+}
+.button_area {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 8px;
+}
+.button_area input {
+    color: white;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+#return_button {
+    background-color: lightgray;
+}
+#submit_button {
+    background-color: #bea574;
+}
+/* 完了画面 */
+.thanks_text {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 48px 0px;
+}
+/* トップページ */
+@media screen and (max-width: 715px) {
+    .header_content ul {
+        display: none;
+    }
+    .hamburger-menu {
+        display: block;
+    }
+    tr,
+    td {
+        font-size: 9px;
+    }
+}
+@media screen and (max-width: 422px) {
+    .title_text {
+        font-size: 20px;
+    }
+    .main_form input,
+    select {
+        width: 300px;
+    }
+    .thanks_text {
+        font-size: 20px;
+    }
+}
