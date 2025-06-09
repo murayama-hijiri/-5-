@@ -322,7 +322,9 @@ footer img {
     width: 100px;
 }
 /* 確認画面 */
-td {
+td,
+th {
+    text-align: left;
     padding: 24px;
     word-break: break-all;
 }

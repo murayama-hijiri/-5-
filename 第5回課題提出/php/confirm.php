@@ -23,19 +23,19 @@ $tel = $_POST["tel"];
                 <table>
                     <tbody>
                         <tr>
-                            <td>お名前</td>
+                            <th>お名前</th>
                             <td><?php echo $name;?></td>
                         </tr>
                         <tr>
-                            <td>希望席</td>
+                            <th>希望席</th>
                             <td><?php echo $seat;?></td>
                         </tr>
                         <tr>
-                            <td>メールアドレス</td>
+                            <th>メールアドレス</th>
                             <td><?php echo $email;?></td>
                         </tr>
                         <tr>
-                            <td>電話番号</td>
+                            <th>電話番号</th>
                             <td><?php echo $tel;?></td>
                         </tr>
                     </tbody>
