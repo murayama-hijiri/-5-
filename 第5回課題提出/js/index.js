@@ -70,3 +70,35 @@ $(function () {
         $(".hamburger-menu").toggleClass("hamburger-menu--open");
     });
 });
+//スクロール
+$(function () {
+    $(".scroll").click(function () {
+        let id = $(this).attr("id");
+        const headerHeight = $(".header_content").innerHeight() || 0;
+        $("html, body").animate(
+            {
+                scrollTop: $("." + id).offset().top - headerHeight,
+            },
+            500
+        );
+        return false;
+    });
+});
+$(window).on("load", function () {
+    const hash = location.hash;
+    if (hash) {
+        const id = hash.replace("#", "");
+        const target = $("." + id);
+
+        if (target.length) {
+            const headerHeight = $(".header_content").length
+                ? $(".header_content").innerHeight()
+                : 0;
+            const position = target.offset().top - headerHeight;
+
+            $("html, body").animate({ scrollTop: position }, 500);
+
+            history.replaceState(null, null, location.pathname);
+        }
+    }
+});

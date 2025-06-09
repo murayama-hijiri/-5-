@@ -30,7 +30,7 @@ body {
 
 /* スライド */
 .slide {
-    padding-top: 64px;
+    padding-top: 68px;
     overflow: hidden;
 }
 .swiper {
@@ -83,7 +83,7 @@ body {
     border-bottom: 3px solid #bea574;
 }
 
-#schedule {
+.schedule {
     padding: 24px;
 }
 
@@ -121,12 +121,12 @@ body {
 }
 
 /* アクセス */
-#access {
+.access {
     text-align: center;
     padding: 24px 8px;
 }
 /* フォーム */
-#form {
+.form {
     padding: 24px;
     margin: 0 auto;
     max-width: 400px;
@@ -322,9 +322,9 @@ footer img {
     width: 100px;
 }
 /* 確認画面 */
-tr,
 td {
-    padding: 48px;
+    padding: 24px;
+    word-break: break-all;
 }
 .button_area {
     display: flex;
@@ -352,18 +352,28 @@ td {
     padding: 48px 0px;
 }
 /* トップページ */
-@media screen and (max-width: 715px) {
+@media screen and (max-width: 720px) {
     .header_content ul {
         display: none;
     }
     .hamburger-menu {
         display: block;
     }
-    tr,
-    td {
-        font-size: 9px;
+    .slide {
+        padding-top: 74px;
+    }
+
+    iframe {
+        max-width: 500px;
+        height: 300px;
     }
 }
+@media screen and (max-width: 520px) {
+    iframe {
+        max-width: 300px;
+    }
+}
+
 @media screen and (max-width: 422px) {
     .title_text {
         font-size: 20px;
@@ -374,5 +384,20 @@ td {
     }
     .thanks_text {
         font-size: 20px;
+    }
+    table {
+        margin: 0 auto;
+    }
+    tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    tr,
+    td {
+        font-size: 14px;
+    }
+    .address {
+        font-size: 14px;
     }
 }

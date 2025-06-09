@@ -15,7 +15,7 @@
     </head>
     <body>
         <?php include("header.php")?>
-        <div class="slide">
+        <div class="slide top">
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -37,7 +37,7 @@
             <div id="catch_phrase">
                 <p class="title_text">今年も始まる<span class="text">夏祭り</span></p>
             </div>
-            <div id="schedule">
+            <div class="schedule">
                 <p class="title_text">スケジュール</p>
                 <div class="schedule_box">
                     <div class="schedule_flex">
@@ -58,12 +58,12 @@
                     </div>
                 </div>
             </div>
-            <div id="access">
+            <div class="access">
                 <p class="title_text">アクセス</p>
-                <p>〒771-1154 徳島県徳島市応神町東貞方南川淵川淵</p>
+                <p class="address">〒771-1154 徳島県徳島市応神町東貞方南川淵川淵</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6607.008043415397!2d134.52368644175942!3d34.10784420979454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355373abe3d15637%3A0xac295ae5e2536dbe!2z5ZCJ6YeO5bed5YyX5bK46YGL5YuV5bqD5aC044K944OV44OI44Oc44O844Or5aC0ROmdog!5e0!3m2!1sja!2sjp!4v1749015818509!5m2!1sja!2sjp" width="700" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div id="form">
+            <div class="form">
                 <p class="title_text">席予約</p>
                 <form method="post" action="confirm.php" class="main_form">
                     <div>
