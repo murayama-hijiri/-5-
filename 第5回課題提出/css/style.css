@@ -130,6 +130,8 @@ body {
     padding: 24px;
     margin: 0 auto;
     max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .main_form {
@@ -139,9 +141,11 @@ body {
 
 .main_form input,
 select {
-    width: 400px;
+    width: 100%;
+    max-width: 100%;
     margin-bottom: 8px;
     padding: 4px 0px;
+    box-sizing: border-box;
 }
 
 label span {
@@ -379,10 +383,6 @@ th {
 @media screen and (max-width: 422px) {
     .title_text {
         font-size: 20px;
-    }
-    .main_form input,
-    select {
-        width: 300px;
     }
     .thanks_text {
         font-size: 20px;
