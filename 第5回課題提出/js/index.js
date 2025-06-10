@@ -12,8 +12,7 @@ $(function () {
 $(function () {
     const reg_tel = /^0\d{9,10}$/;
     const reg_email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    $("input, select").on("input change", function () {
+    function formValidation() {
         let tel = $("input[name='tel']").val();
         let email = $("input[name='email']").val();
         let name = $("input[name='name']").val();
@@ -44,7 +43,12 @@ $(function () {
         if (valid) {
             $("#confirm_button").addClass("active").prop("disabled", false);
         }
+    }
+
+    $("input, select").on("input change", function () {
+        formValidation();
     });
+    formValidation();
 });
 //ハンバーガーメニュー
 $(function () {
